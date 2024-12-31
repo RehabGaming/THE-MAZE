@@ -42,8 +42,9 @@ public class itemsScript : MonoBehaviour
         }
     }
 
+
     // This method returns whether the player has collected all the required items
-   public bool AllItemsCollected()
+    public bool AllItemsCollected()
     {
         // Return true if the player has collected at least the total number of items
         return collectedItems >= totalItems;
