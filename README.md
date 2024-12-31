@@ -32,4 +32,4 @@
 ---
 
 ## **לשחק במשחק**
-[לחצו כאן לשחק במשחק ב-Itch.io](https://github.com/RehabGaming/the-maze)
+[לחצו כאן לשחק במשחק ב-Itch.io](https://rehabgaming1.itch.io/the-maze)
