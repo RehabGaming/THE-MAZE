@@ -23,8 +23,6 @@ public struct Position
     public int Y; // Y-coordinate of the cell
 }
 
-   
-
 // Neighbour struct to represent a neighboring cell and the wall it shares with the current cell.
 public struct Neighbour
 {
@@ -37,6 +35,7 @@ public static class MazeGenerator
 {
     private const int zero = 0;
     private const int one = 1;
+
     // Method to get the opposite of a given wall.
     private static WallState GetOppositeWall(WallState wall)
     {
@@ -102,7 +101,7 @@ public static class MazeGenerator
         }
 
         // Check the bottom neighbor
-        if (p.Y >zero && !maze[p.X, p.Y - one].HasFlag(WallState.VISITED))
+        if (p.Y > zero && !maze[p.X, p.Y - one].HasFlag(WallState.VISITED))
         {
             list.Add(new Neighbour
             {
@@ -134,20 +133,20 @@ public static class MazeGenerator
         return list; // Return the list of unvisited neighbors
     }
 
-    
-
     public static WallState[,] Generate(int width, int height)
     {
         WallState[,] maze = new WallState[width, height];
-        //Initially all the walls EXIST
+
+        // Initially all the walls EXIST
         WallState initial = WallState.RIGHT | WallState.LEFT | WallState.UP | WallState.DOWN;
         for (int i = 0; i < width; ++i)
         {
             for (int j = 0; j < height; ++j)
             {
-                maze[i, j] = initial; //1111
+                maze[i, j] = initial; // 1111
             }
         }
+
         maze[zero, UnityEngine.Random.Range(zero, height)] &= ~WallState.LEFT; // Remove left wall of leftmost cell
         maze[width - one, Random.Range(zero, height)] &= ~WallState.RIGHT; // Remove right wall of rightmost cell
         return ApplyRecursiveBacktracker(maze, width, height);

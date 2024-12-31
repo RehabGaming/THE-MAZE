@@ -16,6 +16,7 @@ public class ExitTrigger : MonoBehaviour
             if (itemManager != null && itemManager.AllItemsCollected())
             {
                 // If all items are collected, print that the maze is completed
+
                 Debug.Log("Maze Completed!");
 
                 // trigger the WinGame() method to load the win scene
@@ -36,6 +37,6 @@ public class ExitTrigger : MonoBehaviour
     private void WinGame()
     {
         // Load the "WinScene" after the maze is completed
-        SceneManager.LoadScene("WinScene");  
+        SceneManager.LoadScene("WinScene");
     }
 }

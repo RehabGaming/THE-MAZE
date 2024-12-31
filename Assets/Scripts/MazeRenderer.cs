@@ -15,15 +15,20 @@ public class MazeRenderer : MonoBehaviour
     [SerializeField] private Transform floorPrefab = null;   // Floor prefab (assigned in Unity Inspector)
 
     // Constants to avoid magic numbers
-    private const float WALL_HEIGHT = 1f;                   // Wall height
-    private const float FLOOR_HEIGHT = 1f;                  // Floor height
+    private const float WALL_HEIGHT = 1f;
 
-    private const float HALF_WALL_HEIGHT = 0.5f;                   // Wall height
+    private const float FLOOR_HEIGHT = 1f;
 
-    private const int ZERO = 0;                  
-    private const int ONE = 1;                 
-    private const int TWO = 2;                  
-    private const int NINETY = 90;                  
+    private const float HALF_WALL_HEIGHT = 0.5f;
+
+    private const int ZERO = 0;
+
+    private const int ONE = 1;
+
+    private const int TWO = 2;
+
+    private const int NINETY = 90;
+
 
 
 
